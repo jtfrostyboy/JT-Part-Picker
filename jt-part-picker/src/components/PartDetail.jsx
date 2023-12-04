@@ -26,5 +26,5 @@ export default function PartDetail() {
             <h3>Price: {part.price}</h3>
             <Link to="/parts">Return to Parts List</Link>           
         </div>
-    ) : <h3>Find Part...</h3>
+    ) : <h3>Finding Part...</h3>
 }

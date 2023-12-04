@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import axios, { Axios } from "axios"
+import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import Header from "./Header"
 
@@ -21,7 +21,7 @@ export default function PartList() {
     let navigate = useNavigate()
 
     const showPart = (key) => {
-        navigate(`/parts/${key}`)
+        navigate(`${key}`)
     }
     
     
