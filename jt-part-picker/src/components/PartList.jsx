@@ -1,12 +1,49 @@
-
+import { useState, useEffect } from "react"
+import axios, { Axios } from "axios"
+import { Link, useNavigate } from "react-router-dom"
+import Header from "./Header"
 
 
 
 
 export default function PartList() {
-    return(
-        <div>
-            
+    const [parts, setParts] = useState()
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        const getParts = async () => {
+            const response = await axios.get(`http://localhost:3001/parts`)
+            setParts(response.data)
+            console.log(response.data)
+        }
+        getParts()
+    }, [])
+
+    const showPart = (key) => {
+        navigate(`/parts/${key}`)
+    }
+    
+    
+    
+    return parts ? (
+        <>
+        <Header/>
+        <div className="partList">
+            <h2>All Parts</h2>
+            <div>
+                {parts.map((part,key) => (
+                    <div key={key} className="partCard" onClick={()=>showPart(part.id)}>
+                        <h2>{part.name}</h2>
+                        <h3>{part.type}</h3>
+                        <h3>{part.price}</h3>
+
+                    </div>
+                ))}
+            </div>
         </div>
+            
+        </>
+    ): (
+        <h3>Loading Parts...</h3>
     )
 }
