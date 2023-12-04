@@ -1,9 +1,7 @@
-
-
-export default function Home() {
+export default function NewBuild() {
     return(
         <div>
-
+            
         </div>
     )
 }
