@@ -28,21 +28,20 @@ export default function PartList() {
     
     return parts ? (
         <>
-        <Header/>
-        <div className="partList">
-            <h2>All Parts</h2>
-            <div>
-                {parts.map((part,key) => (
-                    <div key={key} className="partCard" onClick={()=>showPart(key)}>
-                        <h2>{part.name}</h2>
-                        <h3>{part.type}</h3>
-                        <h3>{part.price}</h3>
+            <Header/>
+            <div className="partList">
+                <h2>All Parts</h2>
+                <div>
+                    {parts.map((part,key) => (
+                        <div key={key} className="partCard" onClick={()=>showPart(key)}>
+                            <h2>{part.name}</h2>
+                            <h3>{part.type}</h3>
+                            <h3>{part.price}</h3>
 
-                    </div>
-                ))}
-            </div>
-        </div>
-            
+                        </div>
+                    ))}
+                </div>
+            </div>            
         </>
     ): (
         <h3>Loading Parts...</h3>

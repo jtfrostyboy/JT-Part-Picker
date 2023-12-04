@@ -33,13 +33,6 @@ export default function BuildList() {
                     builds.map((build, key) => (
                         <div key={key} onClick={()=>showBuild(key)}>
                             <h2>{build.name}</h2>
-                            <h4>CPU: {build.cpu}</h4>
-                            <h4>GPU: {build.gpu}</h4>
-                            <h4>RAM: {build.ram}</h4>
-                            <h4>Storage: {build.storage}</h4>
-                            <h4>Motherboard: {build.motherboard}</h4>
-                            <h4>Power Supply: {build.powerSupply}</h4>
-                            <h4>Case: {build.case}</h4>
                             <h3>Price: {build.totalPrice}</h3>
                         </div>
                     ))

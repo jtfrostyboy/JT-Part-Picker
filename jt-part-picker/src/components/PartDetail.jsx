@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { useParams, Link } from "react-router-dom"
-import Header from "./Header"
+
 
 export default function PartDetail() {
     const [part, setPart] = useState()
-    const {id} = useParams()
+    let {id} = useParams()
     
 
 
