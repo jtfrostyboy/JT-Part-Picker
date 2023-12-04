@@ -1,12 +1,15 @@
 
 const mongoose = require('mongoose')
 const partSchema = require('./part')
-const partListSchema = require('./partList')
+const pcBuildSchema = require('./pcBuild')
 
 
-const Part = mongoose.model('part', package)
-const PartList = require('partList', partListSchema)
+
+const Part = mongoose.model('part', partSchema)
+const PcBuild = mongoose.model('pcBuild', pcBuildSchema)
+
 
 module.exports = {
     Part,
+    PcBuild   
 }
