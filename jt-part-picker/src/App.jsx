@@ -7,6 +7,7 @@ import PartList from './components/PartList'
 import PartDetail from './components/PartDetail'
 import BuildList from './components/BuildList'
 import BuildDetail from './components/BuildDetail'
+import NewBuild from './components/NewBuild'
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
           <Route path='/parts/:id' element={ <PartDetail/> }/>
           <Route path='/builds' element={ <BuildList/> }/>
           <Route path='/builds/:id' element={ <BuildDetail/> }/>
+          <Route path='/create' element={ <NewBuild/> }/>
         </Routes>
       </main>
     </div>
