@@ -10,6 +10,7 @@ export default function Nav() {
                 <Link className="navButton" to="/parts"> Parts </Link>
                 <Link className="navButton" to="/builds"> Builds </Link>
                 <Link className="navButton" to="/create"> Make Your Own </Link>
+                <Link className="navButton" to="/review"> Reviews </Link>
             </div>
         </div>
     )
