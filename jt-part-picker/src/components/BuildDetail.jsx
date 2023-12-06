@@ -29,6 +29,7 @@ export default function BuildDetail() {
             <h4>Power Supply: {build.powerSupply}</h4>
             <h4>Case: {build.case}</h4>
             <h3>Price: {build.totalPrice}</h3>
+            <Link to="/builds">Return to Builds List</Link>
         </div>
     ) : <h3>Finding Build...</h3>
 }
