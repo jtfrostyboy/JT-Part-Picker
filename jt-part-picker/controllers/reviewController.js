@@ -65,9 +65,9 @@ async function deleteReview(req,res) {
 
 
 module.exports = {
-    getAllBuilds,
-    getOneBuild,
-    createBuild,
-    updateBuild,
-    deleteBuild
+    getAllReviews,
+    getOneReview,
+    createReview,
+    updateReview,
+    deleteReview
 }
