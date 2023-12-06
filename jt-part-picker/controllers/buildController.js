@@ -14,7 +14,7 @@ async function getOneBuild(req, res) {
         const id = req.params.id
         const build = await PcBuild.findById(id)
         if (build) {
-            return res.json(task)
+            return res.json(build)
         }
         return res.status(404).send('Build with this id doesnt exist')
     } catch (error) {
