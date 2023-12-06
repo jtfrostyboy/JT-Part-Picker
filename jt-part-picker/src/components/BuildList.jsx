@@ -24,20 +24,23 @@ export default function BuildList() {
     }
 
 
-    return(
+    return builds ?(
         <>
             <Header/>
             <div className="builds">
                 <h2>List of Builds</h2>
-                {
-                    builds.map((build, key) => (
-                        <div key={key} onClick={()=>showBuild(key)}>
+                <div>
+                    {builds.map((build, key) => (
+                        <div key={key} className="buildCard" onClick={()=>showBuild(build._id)}>
                             <h2>{build.name}</h2>
-                            <h3>Price: {build.totalPrice}</h3>
+                            <h3>{build.totalPrice}</h3>
                         </div>
-                    ))
-                }
+                    ))}
+
+                </div>
             </div>
         </>
+    ): (
+        <h3>Loading Builds...</h3>
     )
 }

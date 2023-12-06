@@ -33,7 +33,7 @@ export default function PartList() {
                 <h2>All Parts</h2>
                 <div>
                     {parts.map((part,key) => (
-                        <div key={key} className="partCard" onClick={()=>showPart(key)}>
+                        <div key={key} className="partCard" onClick={()=>showPart(part._id)}>
                             <h2>{part.name}</h2>
                             <h3>{part.type}</h3>
                             <h3>{part.price}</h3>
