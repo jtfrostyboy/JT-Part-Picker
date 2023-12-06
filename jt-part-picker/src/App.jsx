@@ -8,7 +8,7 @@ import PartDetail from './components/PartDetail'
 import BuildList from './components/BuildList'
 import BuildDetail from './components/BuildDetail'
 import NewBuild from './components/NewBuild'
-import Review from './components/ReviewList'
+import ReviewList from './components/ReviewList'
 import ReviewDetail from './components/ReviewDetail'
 
 function App() {
