@@ -2,12 +2,21 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import Header from "./Header"
-
+import { DataTable } from "primereact/datatable"
+import { Column } from "primereact/column"
+import "primereact/resources/themes/lara-light-indigo/theme.css"
+import "primereact/resources/primereact.min.css"
+import { InputText } from "primereact/inputtext"
+import { FilterMatchMode } from "primereact/api"
 
 
 
 export default function PartList() {
-    const [parts, setParts] = useState()
+    const [parts, setParts] = useState([])
+    const [filters, setFilters] = useState({
+        global: {value: null, matchMode: FilterMatchMode.CONTAINS}
+    })
+    
 
     useEffect(() => {
         const getParts = async () => {
@@ -31,15 +40,17 @@ export default function PartList() {
             <Header/>
             <div className="partList">
                 <h2>All Parts</h2>
-                <div>
-                    {parts.map((part,key) => (
-                        <div key={key} className="partCard" onClick={()=>showPart(part._id)}>
-                            <h2>{part.name}</h2>
-                            <h3>{part.type}</h3>
-                            <h3>{part.price}</h3>
-
-                        </div>
-                    ))}
+                <div className="partCard">
+                    <InputText
+                        onInput={(e)=>setFilters({
+                            global: { value: e.target.value, matchMode: FilterMatchMode.CONTAINS}
+                        })}
+                    />
+                    <DataTable value={parts} filters={filters} removableSort selectionMode="single" onRowDoubleClick={(e)=>showPart(e.data._id)}> 
+                        <Column field="name" header="Name" sortable />
+                        <Column field="type" header="Type" sortable />
+                        <Column field="price" header="Price" sortable />
+                    </DataTable>
                 </div>
             </div>            
         </>
@@ -47,3 +58,4 @@ export default function PartList() {
         <h3>Loading Parts...</h3>
     )
 }
+

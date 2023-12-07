@@ -10,6 +10,7 @@ import BuildDetail from './components/BuildDetail'
 import NewBuild from './components/NewBuild'
 import ReviewList from './components/ReviewList'
 import ReviewDetail from './components/ReviewDetail'
+import CreateReview from './components/CreateReview'
 
 function App() {
   
@@ -26,6 +27,7 @@ function App() {
           <Route path='/create' element={ <NewBuild/> }/>
           <Route path='/review' element={ <ReviewList/> }/>
           <Route path='/review/:id' element={ <ReviewDetail/> }/>
+          <Route path='/newreview' element={ <CreateReview/> }/>
         </Routes>
       </main>
     </div>

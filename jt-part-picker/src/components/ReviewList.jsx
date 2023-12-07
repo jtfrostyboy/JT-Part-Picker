@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Header from "./Header"
 
 
@@ -27,6 +27,7 @@ export default function ReviewList() {
             <Header/>
             <div className="reviewList">
                 <h2>All Reviews</h2>
+                <Link to='/newreview'>Add a Review</Link>
                 <div>
                     {reviews.map((review,key) => (
                         <div key={key} className="reviewCard" onClick={()=>showReview(review._id)}>

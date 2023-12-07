@@ -29,7 +29,7 @@ export default function BuildList() {
             <Header/>
             <div className="builds">
                 <h2>List of Builds</h2>
-                <div>
+                <div className="buildCard">
                     {builds.map((build, key) => (
                         <div key={key} className="buildCard" onClick={()=>showBuild(build._id)}>
                             <h2>{build.name}</h2>
