@@ -46,7 +46,7 @@ export default function PartList() {
                             global: { value: e.target.value, matchMode: FilterMatchMode.CONTAINS}
                         })}
                     />
-                    <DataTable value={parts} filters={filters} removableSort selectionMode="single" onRowDoubleClick={(e)=>showPart(e.data._id)}> 
+                    <DataTable value={parts} filters={filters} paginator rows={5} rowsPerPageOptions={[1,5,10]} totalRecords={parts.length} removableSort selectionMode="single" onRowDoubleClick={(e)=>showPart(e.data._id)}> 
                         <Column field="name" header="Name" sortable />
                         <Column field="type" header="Type" sortable />
                         <Column field="price" header="Price" sortable />
