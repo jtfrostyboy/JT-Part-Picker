@@ -45,7 +45,7 @@ export default function CreateReview() {
                     <input type="text" placeholder='Title' value={title} onChange={handleTitleChange} />
                 </label>
                 <label>
-                    <input type="text" placeholder="Part" value={part} onChange={setPart} />
+                    <input type="text" placeholder="Part" value={part} onChange={handlePartChange} />
                 </label>
                 <label>
                     Write your review
