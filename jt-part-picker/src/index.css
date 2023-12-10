@@ -261,3 +261,36 @@ Link {
 .returnLink:hover {
   text-decoration: underline;
 }
+
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.homeArticles {
+  margin-top: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+}
+
+.mover {
+  font-size: 16px;
+  color: #ff0000;
+  position: relative;
+  animation: moveBackAndForth 3s linear infinite;
+}
+
+@keyframes moveBackAndForth {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px); /* Adjust the distance to your liking */
+  }
+}
+
