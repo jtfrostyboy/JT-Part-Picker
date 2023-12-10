@@ -27,3 +27,7 @@ JT-Part-Picker is a web platform designed for PC enthusiasts, providing a compre
 - React.js
 - MongoDB
 
+## Authors
+
+- **Joshua Thomas** [Github](https://github.com/jtfrostyboy) [LinkedIn](https://www.linkedin.com/in/joshua-thomas-international/)
+
