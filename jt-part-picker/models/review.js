@@ -1,10 +1,10 @@
-const { Schema, SchemaType } = require('mongoose')
+const { Schema } = require('mongoose')
 
 const reviewSchema = new Schema(
     {
-        title: { type: String, required: true },
-        part: { type: Schema.Types.ObjectId, required: true },
-        description: { type: String, required: true }
+        title: { type: String },
+        part: { type: String },
+        description: { type: String }
     }
 )
 
