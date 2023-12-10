@@ -24,11 +24,11 @@ export default function PartDetail() {
 
     return part ? (
         <div className="partDetail">
-            <h2>Name: {part.name}</h2>
-            <h3>Type: {part.type}</h3>
-            <h3>Price: {part.price}</h3>
-            <button onClick={()=>showReview(part.name)}>Reviews</button>
-            <Link to="/parts">Return to Parts List</Link>           
+            <h2 className="partName">Name: {part.name}</h2>
+            <h3 className="partType">Type: {part.type}</h3>
+            <h3 className="partPrice">Price: {part.price}</h3>
+            <button className="reviewButton" onClick={()=>showReview(part.name)}>Reviews</button>
+            <Link className="returnLink" to="/parts">Return to Parts List</Link>           
         </div>
     ) : <h3>Finding Part...</h3>
 }

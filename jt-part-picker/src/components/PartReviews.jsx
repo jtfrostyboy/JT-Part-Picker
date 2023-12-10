@@ -20,7 +20,7 @@ export default function PartReviews() {
     }, [])
 
     const showReview = (key) => {
-        navigate(`${key}`)
+        navigate(`/review/${key}`)
     }
 
 

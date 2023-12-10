@@ -68,7 +68,7 @@ export default function ReviewDetail() {
     return review ? (
         <div className="reviewDetail">
             <form>
-                <h1>Create Review</h1>
+                <h1>Review</h1>
                 <label>
                     <input type="text" placeholder='Title' defaultValue={review.title} onChange={handleTitleChange}/>
                 </label>

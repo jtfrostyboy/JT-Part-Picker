@@ -16,10 +16,3 @@ JT-Part-Picker is a web platform designed for PC enthusiasts, providing a compre
 
 - **User-Friendly Interface:** The platform features an intuitive and user-friendly interface, making it easy for users of all experience levels to navigate and find the information they need.
 
-## Getting Started
-
-To get started with JT-Part-Picker, follow these steps:
-
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/JT-Part-Picker.git
