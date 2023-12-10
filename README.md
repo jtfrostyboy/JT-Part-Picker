@@ -16,3 +16,14 @@ JT-Part-Picker is a web platform designed for PC enthusiasts, providing a compre
 
 - **User-Friendly Interface:** The platform features an intuitive and user-friendly interface, making it easy for users of all experience levels to navigate and find the information they need.
 
+## Built With
+
+- HTML5
+- CSS3
+- Javascript
+- Node.js
+- Mongoose
+- Express
+- React.js
+- MongoDB
+
